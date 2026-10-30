@@ -1,0 +1,37 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.phone-numbers {
+  box-sizing: border-box;
+  background: none;
+
+  display: flex;
+  height: 193px;
+  justify-content: end;
+  align-items: center;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 8px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: Bold;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: $main-white-color;
+    text-align: right;
+
+    @include on-desktop {
+      font-size: 16px;
+    }
+  }
+}

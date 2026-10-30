@@ -24,13 +24,11 @@
     right: 0;
     left: 0;
 
-    // opacity: 0;
     transition: all $transition-duration;
     transform: translateX(-100%);
     pointer-events: none;
 
     &:target {
-      // opacity: 1;
       transform: translateX(0);
       pointer-events: all;
     }
@@ -40,7 +38,7 @@
     overflow: hidden;
   }
 
-  &__phone-menu-mobile {
+  &__phone-menu {
     position: fixed;
     top: 0;
     right: 0;
@@ -56,28 +54,7 @@
     }
   }
 
-  &:has(.page__phone-menu-mobile:target) {
+  &:has(.page__phone-menu:target) {
     overflow: hidden;
-  }
-
-  &__phone-menu {
-    position: absolute;
-    top: 0;
-    right: 72px;
-
-    @include on-desktop {
-      right: 120px;
-    }
-
-    pointer-events: all;
-    opacity: 1;
-    transition: all $transition-duration;
-    transform: translateX(-138px);
-  }
-
-  &__phone-menu--hidden {
-    opacity: 0;
-    transform: translateX(0);
-    pointer-events: none;
   }
 }

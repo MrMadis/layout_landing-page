@@ -56,17 +56,35 @@
 
         <div class="top-bar__icons">
           <a
-            href="#"
+            href="#phone-menu"
             class="icon icon--phone"
-          ></a>
-          <a
-            href="#phone-menu-mobile"
-            class="icon icon--phone-mobile"
           ></a>
           <a
             href="#menu"
             class="icon icon--menu"
           ></a>
+        </div>
+
+        <div
+          class="top-bar__phone-numbers top-bar__phone-numbers--hidden phone-numbers"
+          id="phone-numbers"
+        >
+          <ul class="phone-numbers__list">
+            <li class="phone-numbers__item">
+              <div class="phone-numbers__text">
+                The Met Fifth Avenue
+                <br />
+                +1 212-535-7710
+              </div>
+            </li>
+            <li class="phone-numbers__item">
+              <div class="phone-numbers__text">
+                The Met Cloisters
+                <br />
+                +1 212-923-3700
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -181,43 +199,10 @@
     <!-- #endregion -->
     <!-- #region phone-menu -->
     <div
-      class="page__phone-menu page__phone-menu--hidden phone-menu"
+      class="page__phone-menu phone-menu"
       id="phone-menu"
     >
-      <ul class="phone-menu__list">
-        <li class="phone-menu__item">
-          <a
-            href="tel:+1 212-535-7710"
-            class="phone-menu__link"
-          >
-            <div class="phone-menu__text">
-              The Met Fifth Avenue
-              <br />
-              +1 212-535-7710
-            </div>
-          </a>
-        </li>
-        <li class="phone-menu__item">
-          <a
-            href="tel:+1 212-923-3700"
-            class="phone-menu__link"
-          >
-            <div class="phone-menu__text">
-              The Met Cloisters
-              <br />
-              +1 212-923-3700
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- #endregion -->
-    <!-- #region phone-menu-mobile -->
-    <div
-      class="page__phone-menu-mobile phone-menu-mobile"
-      id="phone-menu-mobile"
-    >
-      <div class="top-bar phone-menu-mobile__top">
+      <div class="top-bar phone-menu__top">
         <a
           href="#"
           class="top-bar__logo-link"
@@ -235,26 +220,26 @@
         ></a>
       </div>
 
-      <div class="phone-menu-mobile__content">
-        <ul class="phone-menu-mobile__list">
-          <li class="phone-menu-mobile__item">
+      <div class="phone-menu__content">
+        <ul class="phone-menu__list">
+          <li class="phone-menu__item">
             <a
               href="tel:+1 212-535-7710"
-              class="phone-menu-mobile__link"
+              class="phone-menu__link"
             >
-              <div class="phone-menu-mobile__text">
+              <div class="phone-menu__text">
                 The Met Fifth Avenue
                 <br />
                 +1 212-535-7710
               </div>
             </a>
           </li>
-          <li class="phone-menu-mobile__item">
+          <li class="phone-menu__item">
             <a
               href="tel:+1 212-923-3700"
-              class="phone-menu-mobile__link"
+              class="phone-menu__link"
             >
-              <div class="phone-menu-mobile__text">
+              <div class="phone-menu__text">
                 The Met Cloisters
                 <br />
                 +1 212-923-3700
@@ -592,7 +577,7 @@
                   class="form__name"
                 />
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   placeholder="Email"
                   autocomplete="off"

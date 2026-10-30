@@ -16,22 +16,6 @@
 
   &--phone {
     background-image: url(../images/icons/icon-phone.svg);
-
-    display: none;
-  }
-
-  &--phone-mobile {
-    background-image: url(../images/icons/icon-phone.svg);
-  }
-
-  @include on-tablet {
-    &--phone {
-      display: block;
-    }
-
-    &--phone-mobile {
-      display: none;
-    }
   }
 
   &--menu {
