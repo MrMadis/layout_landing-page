@@ -46,7 +46,7 @@
   &__phone-number-text {
     width: fit-content;
 
-    @include link-underline(left);
+    @include link-underline(left, -4);
   }
 
   &__phone-number-link {

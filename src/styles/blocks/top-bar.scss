@@ -43,7 +43,6 @@
     position: absolute;
     top: 0;
     right: 72px;
-    pointer-events: none;
 
     @include on-desktop {
       right: 120px;
@@ -51,11 +50,13 @@
 
     opacity: 1;
     transition: all $transition-duration;
-    transform: translateX(-138px);
+    transform: translateX(-119px);
+    pointer-events: all;
   }
 
   &__phone-numbers--hidden {
     opacity: 0;
     transform: translateX(0);
+    pointer-events: none;
   }
 }

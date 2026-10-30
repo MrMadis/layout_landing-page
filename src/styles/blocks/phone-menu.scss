@@ -42,6 +42,6 @@
     line-height: 150%;
     letter-spacing: 2px;
 
-    @include link-underline(center);
+    @include link-underline(center, -8);
   }
 }

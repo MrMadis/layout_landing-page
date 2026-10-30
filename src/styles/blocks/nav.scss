@@ -21,6 +21,6 @@
     color: $main-white-color;
     text-decoration: none;
 
-    @include link-underline(left);
+    @include link-underline(left, -8);
   }
 }

@@ -2,7 +2,8 @@
 
 const headerTop = document.querySelector('.header__top');
 const phoneIcon = document.querySelector('.icon--phone');
-const phoneMenu = document.querySelector('.phone-numbers');
+const phoneNumbers = document.querySelector('.phone-numbers');
+const phoneList = document.querySelector('.phone-numbers__list');
 const menuID = document.getElementById('phone-menu');
 
 window.addEventListener('hashchange', () => {
@@ -14,11 +15,17 @@ window.addEventListener('hashchange', () => {
 });
 
 phoneIcon.addEventListener('mouseenter', () => {
-  if (window.innerWidth >= 576) {
-    phoneMenu.classList.remove('top-bar__phone-numbers--hidden');
-  }
+  phoneNumbers.classList.remove('top-bar__phone-numbers--hidden');
 });
 
 phoneIcon.addEventListener('mouseleave', () => {
-  phoneMenu.classList.add('top-bar__phone-numbers--hidden');
+  phoneNumbers.classList.add('top-bar__phone-numbers--hidden');
+});
+
+phoneList.addEventListener('mouseenter', () => {
+  phoneNumbers.classList.remove('top-bar__phone-numbers--hidden');
+});
+
+phoneList.addEventListener('mouseleave', () => {
+  phoneNumbers.classList.add('top-bar__phone-numbers--hidden');
 });
