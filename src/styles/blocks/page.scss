@@ -1,0 +1,83 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.page {
+  font-family: Cinzel, serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  color: $main-dark-color;
+
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+    background-color: #fff;
+    z-index: 0;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    // opacity: 0;
+    transition: all $transition-duration;
+    transform: translateX(-100%);
+    pointer-events: none;
+
+    &:target {
+      // opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
+  &__phone-menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity $transition-duration;
+    pointer-events: none;
+
+    &:target {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &:has(.page__phone-menu-mobile:target) {
+    overflow: hidden;
+  }
+
+  &__phone-menu {
+    position: absolute;
+    top: 0;
+    right: 72px;
+
+    @include on-desktop {
+      right: 120px;
+    }
+
+    pointer-events: all;
+    opacity: 1;
+    transition: all $transition-duration;
+    transform: translateX(-138px);
+  }
+
+  &__phone-menu--hidden {
+    opacity: 0;
+    transform: translateX(0);
+    pointer-events: none;
+  }
+}

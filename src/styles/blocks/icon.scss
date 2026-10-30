@@ -1,0 +1,48 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+
+  @include hover(transform, scale(1.2));
+
+  @include on-tablet {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--phone {
+    background-image: url(../images/icons/icon-phone.svg);
+
+    display: none;
+  }
+
+  &--phone-mobile {
+    background-image: url(../images/icons/icon-phone.svg);
+  }
+
+  @include on-tablet {
+    &--phone {
+      display: block;
+    }
+
+    &--phone-mobile {
+      display: none;
+    }
+  }
+
+  &--menu {
+    background-image: url(../images/icons/icon-burger-menu.svg);
+
+    &:hover {
+      background-image: url(../images/icons/icon-burger-menu-hover.svg);
+    }
+  }
+
+  &--close {
+    background-image: url(../images/icons/icon-close.svg);
+  }
+}
